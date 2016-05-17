@@ -12,6 +12,11 @@
 		49B2002A1CEA34A400B3FE69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B200281CEA34A400B3FE69 /* Main.storyboard */; };
 		49B2002C1CEA34A400B3FE69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B2002B1CEA34A400B3FE69 /* Assets.xcassets */; };
 		49B2002F1CEA34A400B3FE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B2002D1CEA34A400B3FE69 /* LaunchScreen.storyboard */; };
+		49B200391CEA375D00B3FE69 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B200381CEA375D00B3FE69 /* Reachability.m */; };
+		49B2003C1CEA37BA00B3FE69 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2003B1CEA37BA00B3FE69 /* Weather.swift */; };
+		49B2003E1CEA3EB300B3FE69 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2003D1CEA3EB300B3FE69 /* NetworkManager.swift */; };
+		49B200401CEA3EE500B3FE69 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2003F1CEA3EE500B3FE69 /* DataManager.swift */; };
+		49B200421CEA542100B3FE69 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B200411CEA542100B3FE69 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,13 @@
 		49B2002B1CEA34A400B3FE69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49B2002E1CEA34A400B3FE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B200301CEA34A400B3FE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B200361CEA375C00B3FE69 /* Weather App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weather App-Bridging-Header.h"; sourceTree = "<group>"; };
+		49B200371CEA375D00B3FE69 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		49B200381CEA375D00B3FE69 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		49B2003B1CEA37BA00B3FE69 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		49B2003D1CEA3EB300B3FE69 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		49B2003F1CEA3EE500B3FE69 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		49B200411CEA542100B3FE69 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B200421CEA542100B3FE69 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +51,7 @@
 		49B200181CEA34A400B3FE69 = {
 			isa = PBXGroup;
 			children = (
+				49B200411CEA542100B3FE69 /* CoreLocation.framework */,
 				49B200231CEA34A400B3FE69 /* Weather App */,
 				49B200221CEA34A400B3FE69 /* Products */,
 			);
@@ -56,12 +70,26 @@
 			children = (
 				49B200241CEA34A400B3FE69 /* AppDelegate.swift */,
 				49B200261CEA34A400B3FE69 /* ViewController.swift */,
+				49B2003B1CEA37BA00B3FE69 /* Weather.swift */,
+				49B2003D1CEA3EB300B3FE69 /* NetworkManager.swift */,
+				49B2003F1CEA3EE500B3FE69 /* DataManager.swift */,
 				49B200281CEA34A400B3FE69 /* Main.storyboard */,
 				49B2002B1CEA34A400B3FE69 /* Assets.xcassets */,
 				49B2002D1CEA34A400B3FE69 /* LaunchScreen.storyboard */,
 				49B200301CEA34A400B3FE69 /* Info.plist */,
+				49B2003A1CEA378400B3FE69 /* Reachability */,
 			);
 			path = "Weather App";
+			sourceTree = "<group>";
+		};
+		49B2003A1CEA378400B3FE69 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				49B200361CEA375C00B3FE69 /* Weather App-Bridging-Header.h */,
+				49B200371CEA375D00B3FE69 /* Reachability.h */,
+				49B200381CEA375D00B3FE69 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B2003C1CEA37BA00B3FE69 /* Weather.swift in Sources */,
+				49B200401CEA3EE500B3FE69 /* DataManager.swift in Sources */,
 				49B200271CEA34A400B3FE69 /* ViewController.swift in Sources */,
+				49B2003E1CEA3EB300B3FE69 /* NetworkManager.swift in Sources */,
+				49B200391CEA375D00B3FE69 /* Reachability.m in Sources */,
 				49B200251CEA34A400B3FE69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,10 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Weather App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ironyardstudent.Weather-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weather App/Weather App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -263,10 +298,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Weather App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ironyardstudent.Weather-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weather App/Weather App-Bridging-Header.h";
 			};
 			name = Release;
 		};
